@@ -10,4 +10,4 @@ RUN yum install -y osg-gridftp && \
 ADD supervisor-gftp.conf /etc/supervisord.d/40-frontier-squid.conf
 
 EXPOSE 2811
-
+ENV GLOBUS_TCP_PORT_RANGE=50000,51000
