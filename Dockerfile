@@ -7,6 +7,7 @@ RUN yum update -y && \
 RUN yum install -y osg-gridftp && \
     rm -rf /var/cache/yum/*
 
+ADD 90_osg_config.sh /etc/osg/image-config.d/90_osg_config.sh
 ADD supervisor-gftp.conf /etc/supervisord.d/40-frontier-squid.conf
 
 EXPOSE 2811
